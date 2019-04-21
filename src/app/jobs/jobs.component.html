@@ -1,0 +1,21 @@
+<ul class="jobs">
+  <li *ngFor="let job of jobs" class="jobs__item">
+    <h2 class="job__title">{{ job.position }}</h2>
+    <p>
+      <label class="job__label">Company: </label>
+      <span class="job__data">{{ job.company }}</span>
+    </p>
+    <p>
+      <label class="job__label">Tags: </label>
+      <span class="job__data">{{ job.tags.join(', ') }}</span>
+    </p>
+    <p>
+      <label class="job__label">Link: </label>
+      <a class="job__data" href="{{ job.url }}">{{ job.url }}</a>
+    </p>
+    <p>
+      <label class="job__label">Description: </label>
+      <a class="job__data">{{ job.description }}</a>
+    </p>
+  </li>
+</ul>
